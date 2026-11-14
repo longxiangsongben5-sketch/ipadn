@@ -43,7 +43,8 @@ struct FairPlayKeyView: View {
         .navigationTitle(AppText.text("FairPlay復号キー"))
         .fileImporter(isPresented: $importing, allowedContentTypes: [.data], allowsMultipleSelection: false) { result in
             switch result {
-            case .success(let url):
+            case .success(let urls):
+                guard let url = urls.first else { return }
                 do {
                     let scoped = url.startAccessingSecurityScopedResource()
                     defer { if scoped { url.stopAccessingSecurityScopedResource() } }
