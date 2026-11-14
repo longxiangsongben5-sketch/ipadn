@@ -85182,6 +85182,566 @@
           }
         }
       }
+    },
+    "テキストで取り込む": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以文本方式导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import from Text"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以文字方式匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "テキストで取り込む"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "텍스트로 가져오기"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Импорт из текста"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar desde texto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importer depuis du texte"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Text importieren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar de texto"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاستيراد من نص"
+          }
+        }
+      }
+    },
+    "16進数（32文字）または Base64 のキー": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥（十六进制 32 个字符或 Base64）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key (32 hex characters or Base64)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "金鑰（十六進位 32 個字元或 Base64）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16進数（32文字）または Base64 のキー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키(16진수 32자 또는 Base64)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ (32 шестнадцатеричных символа или Base64)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave (32 caracteres hexadecimales o Base64)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé (32 caractères hexadécimaux ou Base64)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlüssel (32 Hex-Zeichen oder Base64)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chave (32 caracteres hexadecimais ou Base64)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المفتاح (32 حرفًا سداسيًا عشريًا أو Base64)"
+          }
+        }
+      }
+    },
+    "貼り付けて取り込む": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴并导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste & Import"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "貼上並匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "貼り付けて取り込む"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "붙여넣어 가져오기"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вставить и импортировать"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pegar e importar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coller et importer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einfügen und importieren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colar e importar"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لصق واستيراد"
+          }
+        }
+      }
+    },
+    "credential.bin の中身を16進数（32文字）または Base64 で貼り付けて取り込めます。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以将 credential.bin 的内容以十六进制（32 个字符）或 Base64 形式粘贴导入。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can also paste the contents of credential.bin as 32 hex characters or Base64 to import it."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以將 credential.bin 的內容以十六進位（32 個字元）或 Base64 形式貼上匯入。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin の中身を16進数（32文字）または Base64 で貼り付けて取り込めます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin의 내용을 16진수(32자) 또는 Base64로 붙여넣어 가져올 수도 있습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Также можно вставить содержимое credential.bin в виде 32 шестнадцатеричных символов или Base64."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "También puede pegar el contenido de credential.bin como 32 caracteres hexadecimales o Base64 para importarlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous pouvez aussi coller le contenu de credential.bin sous forme de 32 caractères hexadécimaux ou Base64 pour l'importer."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sie können den Inhalt von credential.bin auch als 32 Hex-Zeichen oder Base64 einfügen, um ihn zu importieren."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você também pode colar o conteúdo do credential.bin como 32 caracteres hexadecimais ou Base64 para importá-lo."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يمكنك أيضًا لصق محتويات credential.bin على شكل 32 حرفًا سداسيًا عشريًا أو Base64 لاستيراده."
+          }
+        }
+      }
+    },
+    "貼り付けた内容をキーとして読み取れませんでした（16進数32文字、または Base64 で16バイトになる文字列にしてください）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法将粘贴的内容读取为密钥（请使用 32 个十六进制字符，或解码后为 16 字节的 Base64）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The pasted content could not be read as a key (use 32 hex characters, or Base64 that decodes to 16 bytes)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法將貼上的內容讀取為金鑰（請使用 32 個十六進位字元，或解碼後為 16 位元組的 Base64）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "貼り付けた内容をキーとして読み取れませんでした（16進数32文字、または Base64 で16バイトになる文字列にしてください）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "붙여넣은 내용을 키로 읽을 수 없습니다(16진수 32자, 또는 디코딩하면 16바이트가 되는 Base64를 사용하세요)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вставленное содержимое не удалось прочитать как ключ (используйте 32 шестнадцатеричных символа или Base64, декодирующийся в 16 байт)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El contenido pegado no pudo leerse como clave (use 32 caracteres hexadecimales o Base64 que se decodifique en 16 bytes)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le contenu collé n'a pas pu être lu comme une clé (utilisez 32 caractères hexadécimaux ou du Base64 qui se décode en 16 octets)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der eingefügte Inhalt konnte nicht als Schlüssel gelesen werden (verwenden Sie 32 Hex-Zeichen oder Base64, das zu 16 Byte dekodiert)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O conteúdo colado não pôde ser lido como uma chave (use 32 caracteres hexadecimais ou Base64 que decodifique para 16 bytes)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذرت قراءة المحتوى الملصوق كمفتاح (استخدم 32 حرفًا سداسيًا عشريًا، أو Base64 يفك ترميزه إلى 16 بايت)"
+          }
+        }
+      }
+    },
+    "アプリ内のファイルから取り込む": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从应用内文件导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import from App Files"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "從應用程式內檔案匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリ内のファイルから取り込む"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 내 파일에서 가져오기"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Импорт из файлов приложения"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar desde archivos de la app"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importer depuis les fichiers de l'app"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus App-Dateien importieren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar dos arquivos do app"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاستيراد من ملفات التطبيق"
+          }
+        }
+      }
+    },
+    "このアプリの保存領域にあるファイルです。credential.bin（16バイト）をタップすると取り込みを試みます。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这些是此应用存储区域中的文件。点按 credential.bin（16 字节）即可尝试导入。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "These are the files in this app's storage. Tap credential.bin (16 bytes) to try importing it."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "這些是此應用程式儲存區域中的檔案。點按 credential.bin（16 位元組）即可嘗試匯入。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このアプリの保存領域にあるファイルです。credential.bin（16バイト）をタップすると取り込みを試みます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 앱의 저장 영역에 있는 파일입니다. credential.bin(16바이트)을 탭하면 가져오기를 시도합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Это файлы в хранилище этого приложения. Нажмите credential.bin (16 байт), чтобы попытаться импортировать его."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estos son los archivos en el almacenamiento de esta app. Toque credential.bin (16 bytes) para intentar importarlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce sont les fichiers dans le stockage de cette app. Touchez credential.bin (16 octets) pour essayer de l'importer."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies sind die Dateien im Speicher dieser App. Tippen Sie auf credential.bin (16 Byte), um den Import zu versuchen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estes são os arquivos no armazenamento deste app. Toque em credential.bin (16 bytes) para tentar importá-lo."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذه هي الملفات الموجودة في مساحة تخزين هذا التطبيق. اضغط على credential.bin (16 بايت) لمحاولة استيراده."
+          }
+        }
+      }
+    },
+    "ファイルが見つかりません": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到文件"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No files found"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到檔案"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ファイルが見つかりません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "파일을 찾을 수 없음"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Файлы не найдены"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se encontraron archivos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun fichier trouvé"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Dateien gefunden"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum arquivo encontrado"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم العثور على ملفات"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

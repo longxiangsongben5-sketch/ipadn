@@ -586,6 +586,29 @@ enum FairPlayCredentialStore {
         do { try save(data); return .imported } catch { return .invalid }
     }
 
+    /// Paste route: decode a key pasted as text — 32 hex characters or
+    /// Base64 — so the key can be imported with no file UI at all, for
+    /// devices where neither the system picker nor the share sheet will
+    /// hand the file over. Returns nil unless the text decodes to
+    /// exactly 16 bytes.
+    static func keyData(fromText text: String) -> Data? {
+        let cleaned = text.filter { !$0.isWhitespace }
+        if cleaned.count == 32 {
+            var data = Data(capacity: 16)
+            var index = cleaned.startIndex
+            var valid = true
+            while index < cleaned.endIndex {
+                let next = cleaned.index(index, offsetBy: 2)
+                guard let byte = UInt8(cleaned[index..<next], radix: 16) else { valid = false; break }
+                data.append(byte)
+                index = next
+            }
+            if valid, data.count == 16 { return data }
+        }
+        if let decoded = Data(base64Encoded: cleaned), decoded.count == 16 { return decoded }
+        return nil
+    }
+
     static func delete() {
         SecItemDelete(query() as CFDictionary)
         LocalResources.defaults.removeObject(forKey: "fairplayCredentialImportedAt")
