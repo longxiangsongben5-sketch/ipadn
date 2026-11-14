@@ -93,7 +93,13 @@ struct iPadnApp: App {
                 .environmentObject(store.signer)
                 .tint(UX.tint)
                 .toggleStyle(TintedSwitchToggleStyle())
-                .onOpenURL { store.handleURL($0) }
+                .onOpenURL { url in
+                    switch FairPlayCredentialStore.importIfCredentialFile(url) {
+                    case .imported: store.infoMessage = AppText.text("復号キーをインポートしました")
+                    case .invalid: store.errorMessage = AppText.text("復号キーのインポートに失敗しました")
+                    case .notCredential: store.handleURL(url)
+                    }
+                }
                 .onAppear { configureLock(launching: true) }
                 .task { if !LocalResources.isPreview { await AppLock.shared.unlock() } }
                 .compatibleOnChange(of: lockSettings) { _ in configureLock(launching: false) }

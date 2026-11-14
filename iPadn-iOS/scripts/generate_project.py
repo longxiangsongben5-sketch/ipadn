@@ -263,7 +263,9 @@ info = {"CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)", "CFBundleExecuta
         "CFBundleIcons~ipad": {"CFBundleAlternateIcons": {name: {"CFBundleIconFiles": [name + "60x60", name + "76x76", name + "83x83"], "UIPrerenderedIcon": False}
                                                          for name in ALTERNATE_ICONS}},
         "CFBundleDocumentTypes": [{"CFBundleTypeName": "IPA 安装包", "CFBundleTypeRole": "Viewer", "LSHandlerRank": "Alternate",
-                                   "LSItemContentTypes": ["com.apple.itunes.ipa", "public.zip-archive"]}],
+                                   "LSItemContentTypes": ["com.apple.itunes.ipa", "public.zip-archive"]},
+                                  {"CFBundleTypeName": "FairPlay Credential", "CFBundleTypeRole": "Viewer", "LSHandlerRank": "Alternate",
+                                   "LSItemContentTypes": ["com.apple.macbinary-archive", "public.data"]}],
         "UTImportedTypeDeclarations": [{"UTTypeIdentifier": "com.apple.itunes.ipa", "UTTypeDescription": "iOS App Archive",
                                         "UTTypeConformsTo": ["public.zip-archive"], "UTTypeTagSpecification": {"public.filename-extension": ["ipa"]}}],
         "NSAppTransportSecurity": {"NSAllowsLocalNetworking": True,

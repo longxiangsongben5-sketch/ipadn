@@ -570,6 +570,22 @@ enum FairPlayCredentialStore {
         }
         LocalResources.defaults.set(Date().timeIntervalSince1970, forKey: "fairplayCredentialImportedAt")
     }
+    enum CredentialFileImport { case imported, invalid, notCredential }
+
+    /// Share-sheet route: a file named credential.bin (or any 16-byte
+    /// .bin file) handed to the app is taken as the decrypt key, so the
+    /// key can be imported even when the system file picker will not
+    /// let the user select the file.
+    static func importIfCredentialFile(_ url: URL) -> CredentialFileImport {
+        guard url.isFileURL else { return .notCredential }
+        let isBin = url.pathExtension.lowercased() == "bin"
+        guard url.lastPathComponent.lowercased() == "credential.bin" || isBin else { return .notCredential }
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer { if scoped { url.stopAccessingSecurityScopedResource() } }
+        guard let data = try? Data(contentsOf: url), data.count == 16 else { return .invalid }
+        do { try save(data); return .imported } catch { return .invalid }
+    }
+
     static func delete() {
         SecItemDelete(query() as CFDictionary)
         LocalResources.defaults.removeObject(forKey: "fairplayCredentialImportedAt")

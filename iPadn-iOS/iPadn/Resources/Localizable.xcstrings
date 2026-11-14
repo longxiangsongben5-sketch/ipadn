@@ -84205,28 +84205,28 @@
     },
     "復号キーをインポートしました": {
       "localizations": {
-        "zh-Hans": {
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "解密密钥已导入"
+            "value": "復号キーをインポートしました"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Decryption key imported"
+            "value": "Decrypt key imported"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导入解密密钥"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "解密密鑰已匯入"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "復号キーをインポートしました"
+            "value": "已匯入解密金鑰"
           }
         },
         "ko": {
@@ -84235,16 +84235,10 @@
             "value": "복호화 키를 가져왔습니다"
           }
         },
-        "ru": {
+        "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ключ расшифровки импортирован"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clave de descifrado importada"
+            "value": "Entschlüsselungsschlüssel importiert"
           }
         },
         "fr": {
@@ -84253,16 +84247,22 @@
             "value": "Clé de déchiffrement importée"
           }
         },
-        "de": {
+        "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Entschlüsselungsschlüssel importiert"
+            "value": "Clave de descifrado importada"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Chave de descriptografia importada"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки импортирован"
           }
         },
         "ar": {
@@ -85109,6 +85109,76 @@
           "stringUnit": {
             "state": "translated",
             "value": "تعذر حفظ مفتاح فك التشفير (%lld)"
+          }
+        }
+      }
+    },
+    "復号キーのインポートに失敗しました": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーのインポートに失敗しました"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to import the decrypt key"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入解密密钥失败"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匯入解密金鑰失敗"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키를 가져오지 못했습니다"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsschlüssel konnte nicht importiert werden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l'importation de la clé de déchiffrement"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo importar la clave de descifrado"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao importar a chave de descriptografia"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось импортировать ключ расшифровки"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشل استيراد مفتاح فك التشفير"
           }
         }
       }
