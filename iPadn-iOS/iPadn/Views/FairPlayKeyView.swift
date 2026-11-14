@@ -41,10 +41,9 @@ struct FairPlayKeyView: View {
             }
         }
         .navigationTitle(AppText.text("FairPlay復号キー"))
-        .fileImporter(isPresented: $importing, allowedContentTypes: [.data]) { result in
+        .fileImporter(isPresented: $importing, allowedContentTypes: [.data], allowsMultipleSelection: false) { result in
             switch result {
-            case .success(let urls):
-                guard let url = urls.first else { return }
+            case .success(let url):
                 do {
                     let scoped = url.startAccessingSecurityScopedResource()
                     defer { if scoped { url.stopAccessingSecurityScopedResource() } }
@@ -60,7 +59,7 @@ struct FairPlayKeyView: View {
                 store.errorMessage = error.localizedDescription
             }
         }
-        .alert(AppText.text("復号キーを削除しますか？"), isPresented: $confirmingDelete) {
+        .alert("復号キーを削除しますか？", isPresented: $confirmingDelete) {
             Button(AppText.text("キャンセル"), role: .cancel) { }
             Button(AppText.text("削除"), role: .destructive) {
                 FairPlayCredentialStore.delete()
