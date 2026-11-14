@@ -464,6 +464,7 @@ enum FairPlayDecryptor {
 
     private static func aes(key: Data, iv: Data?, data: Data, operation: CCOperation) throws -> Data {
         var out = Data(count: data.count + kCCBlockSizeAES128)
+        let outCapacity = out.count
         var outLength = 0
         let status = out.withUnsafeMutableBytes { outRaw in
             data.withUnsafeBytes { inRaw in
@@ -473,13 +474,13 @@ enum FairPlayDecryptor {
                             CCCrypt(operation, CCAlgorithm(kCCAlgorithmAES), 0,
                                     keyRaw.baseAddress, key.count, ivRaw.baseAddress,
                                     inRaw.baseAddress, data.count,
-                                    outRaw.baseAddress, out.count, &outLength)
+                                    outRaw.baseAddress, outCapacity, &outLength)
                         }
                     }
                     return CCCrypt(operation, CCAlgorithm(kCCAlgorithmAES), CCOptions(kCCOptionECBMode),
                                    keyRaw.baseAddress, key.count, nil,
                                    inRaw.baseAddress, data.count,
-                                   outRaw.baseAddress, out.count, &outLength)
+                                   outRaw.baseAddress, outCapacity, &outLength)
                 }
             }
         }
