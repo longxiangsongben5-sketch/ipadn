@@ -37651,16 +37651,16 @@
     },
     "未导入": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not imported"
-          }
-        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "未导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not imported"
           }
         },
         "zh-Hant": {
@@ -37690,13 +37690,13 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin importar"
+            "value": "No importada"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non importé"
+            "value": "Non importée"
           }
         },
         "de": {
@@ -37708,13 +37708,13 @@
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Não importado"
+            "value": "Não importada"
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "غير مستورد"
+            "value": "لم يتم الاستيراد"
           }
         }
       }
@@ -56870,13 +56870,13 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Importado"
+            "value": "Importada"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Importé"
+            "value": "Importée"
           }
         },
         "de": {
@@ -56888,7 +56888,7 @@
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Importado"
+            "value": "Importada"
           }
         },
         "ar": {
@@ -83149,6 +83149,1966 @@
           "stringUnit": {
             "state": "translated",
             "value": "لم يُعثر على إصدارات مطابقة بعد؛ النتائج غير مكتملة."
+          }
+        }
+      }
+    },
+    "復号して書き出す": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密并导出"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypt & Export"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密並匯出"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号して書き出す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화하고 내보내기"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровать и экспортировать"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrar y exportar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrer et exporter"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsseln und exportieren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografar e exportar"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فك التشفير والتصدير"
+          }
+        }
+      }
+    },
+    "FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」で credential.bin をインポートしてください": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未导入 FairPlay 解密密钥，请先到「设置 › 维护 › FairPlay 解密密钥」导入 credential.bin"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No FairPlay decryption key imported yet. Import credential.bin in Settings › Maintenance › FairPlay Decryption Key first."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未匯入 FairPlay 解密密鑰，請先到「設定 › 維護 › FairPlay 解密密鑰」匯入 credential.bin"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」で credential.bin をインポートしてください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 복호화 키가 아직 가져와지지 않았습니다. 먼저 설정 › 유지 관리 › FairPlay 복호화 키에서 credential.bin을 가져오세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки FairPlay ещё не импортирован. Сначала импортируйте credential.bin в разделе «Настройки › Обслуживание › Ключ расшифровки FairPlay»."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clave de descifrado FairPlay aún no se ha importado. Importe primero credential.bin en Ajustes › Mantenimiento › Clave de descifrado FairPlay."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clé de déchiffrement FairPlay n'a pas encore été importée. Importez d'abord credential.bin dans Réglages › Maintenance › Clé de déchiffrement FairPlay."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der FairPlay-Entschlüsselungsschlüssel wurde noch nicht importiert. Importieren Sie zuerst credential.bin unter Einstellungen › Wartung › FairPlay-Entschlüsselungsschlüssel."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A chave de descriptografia FairPlay ainda não foi importada. Importe primeiro o credential.bin em Ajustes › Manutenção › Chave de descriptografia FairPlay."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم استيراد مفتاح فك تشفير FairPlay بعد. استورد أولاً credential.bin من الإعدادات › الصيانة › مفتاح فك تشفير FairPlay."
+          }
+        }
+      }
+    },
+    "復号完了：%lld 個のバイナリ、合計 %lld ページ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密完成：%lld 个二进制，共 %lld 页"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypted: %lld binaries, %lld pages in total"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密完成：%lld 個二進位檔案，共 %lld 頁"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号完了：%lld 個のバイナリ、合計 %lld ページ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 완료: 바이너리 %lld개, 총 %lld페이지"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка завершена: бинарных файлов — %lld, страниц — %lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrado completo: %lld binarios, %lld páginas en total"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrement terminé : %lld binaires, %lld pages au total"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselung abgeschlossen: %lld Binärdateien, insgesamt %lld Seiten"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografia concluída: %lld binários, %lld páginas no total"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتمل فك التشفير: %lld ملف ثنائي، %lld صفحة إجمالاً"
+          }
+        }
+      }
+    },
+    "FairPlay復号キー": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 解密密钥"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay Decryption Key"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 解密密鑰"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay復号キー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 복호화 키"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки FairPlay"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave de descifrado FairPlay"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé de déchiffrement FairPlay"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay-Entschlüsselungsschlüssel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chave de descriptografia FairPlay"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفتاح فك تشفير FairPlay"
+          }
+        }
+      }
+    },
+    "復号": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decryption"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrement"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselung"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografia"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فك التشفير"
+          }
+        }
+      }
+    },
+    "ダウンロードしたアカウントに紐づく復号キーをインポートすると、ダウンロード一覧からパッケージを復号して書き出せます。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入与下载账号绑定的解密密钥后，可在下载列表中将安装包解密并导出。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After importing the decryption key bound to the download account, you can decrypt and export packages from the Downloads list."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匯入與下載帳號綁定的解密密鑰後，可在下載列表中將安裝包裝解密並匯出。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ダウンロードしたアカウントに紐づく復号キーをインポートすると、ダウンロード一覧からパッケージを復号して書き出せます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다운로드 계정에 연결된 복호화 키를 가져오면 다운로드 목록에서 패키지를 복호화하고 내보낼 수 있습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "После импорта ключа расшифровки, привязанного к учётной записи загрузки, пакеты можно расшифровывать и экспортировать из списка загрузок."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Después de importar la clave de descifrado vinculada a la cuenta de descarga, puede descifrar y exportar paquetes desde la lista de descargas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Après avoir importé la clé de déchiffrement liée au compte de téléchargement, vous pouvez déchiffrer et exporter les paquets depuis la liste des téléchargements."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach dem Importieren des mit dem Download-Konto verknüpften Entschlüsselungsschlüssels können Sie Pakete in der Download-Liste entschlüsseln und exportieren."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Depois de importar a chave de descriptografia vinculada à conta de download, você pode descriptografar e exportar pacotes a partir da lista de Downloads."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بعد استيراد مفتاح فك التشفير المرتبط بحساب التنزيل، يمكنك فك تشفير الحزم وتصديرها من قائمة التنزيلات."
+          }
+        }
+      }
+    },
+    "状態": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状态"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "狀態"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状態"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "상태"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Статус"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحالة"
+          }
+        }
+      }
+    },
+    "インポート済み": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポート済み"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가져옴"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Импортирован"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importée"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importiert"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importada"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم الاستيراد"
+          }
+        }
+      }
+    },
+    "未インポート": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not imported"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未インポート"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가져오지 않음"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не импортирован"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No importada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non importée"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht importiert"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não importada"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم الاستيراد"
+          }
+        }
+      }
+    },
+    "インポート日時": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入时间"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匯入時間"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インポート日時"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "가져온 시간"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Время импорта"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha de importación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date d'importation"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importzeit"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data de importação"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وقت الاستيراد"
+          }
+        }
+      }
+    },
+    "復号キー（credential.bin、16バイト）はダウンロードに使った Apple アカウントに紐づいています。自分の脱獄デバイスから一度だけ取り出してインポートすれば、ダウンロード一覧のパッケージで「復号して書き出す」を選ぶだけで、この端末上で復号済みパッケージを生成できます。キーはこの端末のキーチェーンにのみ保存され、アップロードされません。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密钥（credential.bin，16 字节）与下载所用的 Apple 账号绑定。从自己的越狱设备提取一次后导入，之后在下载列表中对安装包选择「解密并导出」即可在本机生成解密包。密钥只保存在本机钥匙串中，不会上传。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The decryption key (credential.bin, 16 bytes) is bound to the Apple account used for the download. Extract it once from your own jailbroken device and import it; then choose “Decrypt & Export” on a package in the Downloads list to produce a decrypted package on this device. The key stays in this device's Keychain and is never uploaded."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密鑰（credential.bin，16 位元組）與下載所用的 Apple 帳號綁定。從自己的越獄裝置提取一次後匯入，之後在下載列表中對安裝包選擇「解密並匯出」即可在本機產生解密包。密鑰只保存在本機鑰匙圈中，不會上傳。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キー（credential.bin、16バイト）はダウンロードに使った Apple アカウントに紐づいています。自分の脱獄デバイスから一度だけ取り出してインポートすれば、ダウンロード一覧のパッケージで「復号して書き出す」を選ぶだけで、この端末上で復号済みパッケージを生成できます。キーはこの端末のキーチェーンにのみ保存され、アップロードされません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키(credential.bin, 16바이트)는 다운로드에 사용한 Apple 계정에 연결되어 있습니다. 자신의 탈옥 기기에서 한 번 추출하여 가져오면, 이후 다운로드 목록에서 패키지에 대해 “복호화하고 내보내기”를 선택해 이 기기에서 복호화된 패키지를 만들 수 있습니다. 키는 이 기기의 키체인에만 저장되며 업로드되지 않습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки (credential.bin, 16 байт) привязан к учётной записи Apple, использованной для загрузки. Извлеките его один раз со своего устройства с джейлбрейком и импортируйте; затем для пакета в списке загрузок выберите «Расшифровать и экспортировать», чтобы создать расшифрованный пакет на этом устройстве. Ключ хранится только в связке ключей этого устройства и никуда не отправляется."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clave de descifrado (credential.bin, 16 bytes) está vinculada a la cuenta de Apple utilizada para la descarga. Extráigala una vez desde su propio dispositivo con jailbreak e impórtela; después elija «Descifrar y exportar» en un paquete de la lista de descargas para generar un paquete descifrado en este dispositivo. La clave permanece en el llavero de este dispositivo y nunca se sube."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clé de déchiffrement (credential.bin, 16 octets) est liée au compte Apple utilisé pour le téléchargement. Extrayez-la une fois depuis votre propre appareil jailbreaké et importez-la ; choisissez ensuite « Déchiffrer et exporter » sur un paquet de la liste des téléchargements pour produire un paquet déchiffré sur cet appareil. La clé reste dans le trousseau de cet appareil et n'est jamais envoyée."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Entschlüsselungsschlüssel (credential.bin, 16 Byte) ist an das für den Download verwendete Apple-Konto gebunden. Extrahieren Sie ihn einmal von Ihrem eigenen Gerät mit Jailbreak und importieren Sie ihn; wählen Sie dann bei einem Paket in der Download-Liste „Entschlüsseln und exportieren“, um auf diesem Gerät ein entschlüsseltes Paket zu erstellen. Der Schlüssel bleibt im Schlüsselbund dieses Geräts und wird nie hochgeladen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A chave de descriptografia (credential.bin, 16 bytes) está vinculada à conta Apple usada no download. Extraia-a uma vez do seu próprio dispositivo com jailbreak e importe-a; depois escolha “Descriptografar e exportar” em um pacote da lista de Downloads para gerar um pacote descriptografado neste dispositivo. A chave permanece no chaveiro deste dispositivo e nunca é enviada."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفتاح فك التشفير (credential.bin، 16 بايت) مرتبط بحساب Apple المستخدم في التنزيل. استخرجه مرة واحدة من جهازك المكسور الحماية واستورده؛ ثم اختر “فك التشفير والتصدير” لأي حزمة في قائمة التنزيلات لإنشاء حزمة مفكوكة التشفير على هذا الجهاز. يبقى المفتاح في سلسلة مفاتيح هذا الجهاز ولا يُرفع أبداً."
+          }
+        }
+      }
+    },
+    "キーファイルを置き換える": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换密钥文件"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replace Key File"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更換密鑰檔案"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーファイルを置き換える"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키 파일 교체"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заменить файл ключа"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reemplazar archivo de clave"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remplacer le fichier de clé"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlüsseldatei ersetzen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Substituir arquivo de chave"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استبدال ملف المفتاح"
+          }
+        }
+      }
+    },
+    "credential.bin をインポート": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入 credential.bin"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import credential.bin"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匯入 credential.bin"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin をインポート"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin 가져오기"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Импортировать credential.bin"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar credential.bin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importer credential.bin"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin importieren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar credential.bin"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استيراد credential.bin"
+          }
+        }
+      }
+    },
+    "キーを削除": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除密钥"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Key"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除密鑰"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーを削除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키 삭제"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить ключ"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar clave"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer la clé"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schlüssel löschen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir chave"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف المفتاح"
+          }
+        }
+      }
+    },
+    "アカウントが違うキーではパッケージの認証を開けないため、壊れたファイルは生成されず、復号時にエラーになります。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "账号不一致的密钥无法打开安装包的授权，解密时会直接报错，不会生成损坏的文件。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A key from a different account cannot open a package's authorization; decryption then fails with an error instead of producing a damaged file."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帳號不一致的密鑰無法開啟安裝包的授權，解密時會直接報錯，不會產生損壞的檔案。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アカウントが違うキーではパッケージの認証を開けないため、壊れたファイルは生成されず、復号時にエラーになります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "계정이 다른 키로는 패키지의 인증을 열 수 없습니다. 복호화 시 손상된 파일이 생성되지 않고 오류가 발생합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ от другой учётной записи не может открыть авторизацию пакета; расшифровка завершится ошибкой, а не созданием повреждённого файла."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una clave de otra cuenta no puede abrir la autorización de un paquete; el descifrado fallará con un error en lugar de producir un archivo dañado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une clé provenant d'un autre compte ne peut pas ouvrir l'autorisation d'un paquet ; le déchiffrement échoue alors avec une erreur au lieu de produire un fichier endommagé."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Schlüssel eines anderen Kontos kann die Autorisierung eines Pakets nicht öffnen; die Entschlüsselung schlägt dann mit einem Fehler fehl, statt eine beschädigte Datei zu erzeugen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uma chave de outra conta não pode abrir a autorização de um pacote; a descriptografia falhará com um erro em vez de produzir um arquivo danificado."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يمكن لمفتاح من حساب آخر فتح ترخيص الحزمة؛ سيفشل فك التشفير مع ظهور خطأ بدلاً من إنشاء ملف تالف."
+          }
+        }
+      }
+    },
+    "復号キーをインポートしました": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密钥已导入"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decryption key imported"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密鑰已匯入"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーをインポートしました"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키를 가져왔습니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки импортирован"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave de descifrado importada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé de déchiffrement importée"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsschlüssel importiert"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chave de descriptografia importada"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم استيراد مفتاح فك التشفير"
+          }
+        }
+      }
+    },
+    "復号キーを削除しますか？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除解密密钥？"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete the decryption key?"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除解密密鑰？"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーを削除しますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키를 삭제하시겠습니까?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить ключ расшифровки?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar la clave de descifrado?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer la clé de déchiffrement ?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsschlüssel löschen?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir a chave de descriptografia?"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف مفتاح فك التشفير؟"
+          }
+        }
+      }
+    },
+    "キャンセル": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отменить"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        }
+      }
+    },
+    "削除": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        }
+      }
+    },
+    "復号キーを削除しました": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密钥已删除"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decryption key deleted"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密鑰已刪除"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーを削除しました"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키가 삭제되었습니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки удалён"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave de descifrado eliminada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé de déchiffrement supprimée"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsschlüssel gelöscht"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chave de descriptografia excluída"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم حذف مفتاح فك التشفير"
+          }
+        }
+      }
+    },
+    "パッケージを復号するには credential.bin の再インポートが必要になります。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除后需要重新导入 credential.bin 才能解密安装包。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You will need to import credential.bin again before decrypting packages."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除後需要重新匯入 credential.bin 才能解密安裝包。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パッケージを復号するには credential.bin の再インポートが必要になります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제 후에는 패키지를 복호화하기 전에 credential.bin을 다시 가져와야 합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "После удаления потребуется снова импортировать credential.bin, прежде чем расшифровывать пакеты."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Después de eliminarla, deberá importar credential.bin de nuevo antes de descifrar paquetes."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Après la suppression, vous devrez importer à nouveau credential.bin avant de déchiffrer des paquets."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach dem Löschen müssen Sie credential.bin erneut importieren, bevor Sie Pakete entschlüsseln können."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Após a exclusão, você precisará importar o credential.bin novamente antes de descriptografar pacotes."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بعد الحذف، ستحتاج إلى استيراد credential.bin مرة أخرى قبل فك تشفير الحزم."
+          }
+        }
+      }
+    },
+    "復号キーが無効です（16バイト必須）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密钥无效（应为 16 字节）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid decryption key (must be 16 bytes)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密鑰無效（應為 16 位元組）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーが無効です（16バイト必須）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키가 잘못되었습니다(16바이트여야 함)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Недействительный ключ расшифровки (требуется 16 байт)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clave de descifrado no válida (debe tener 16 bytes)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé de déchiffrement invalide (16 octets requis)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ungültiger Entschlüsselungsschlüssel (16 Byte erforderlich)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chave de descriptografia inválida (deve ter 16 bytes)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفتاح فك التشفير غير صالح (يجب أن يكون 16 بايت)"
+          }
+        }
+      }
+    },
+    "パッケージが破損しているか、形式がサポートされていません": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装包已损坏或格式不受支持"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The package is damaged or its format is not supported"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安裝包已損壞或格式不受支援"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パッケージが破損しているか、形式がサポートされていません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "패키지가 손상되었거나 지원되지 않는 형식입니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пакет повреждён или его формат не поддерживается"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El paquete está dañado o su formato no es compatible"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le paquet est endommagé ou son format n'est pas pris en charge"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Paket ist beschädigt oder sein Format wird nicht unterstützt"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O pacote está danificado ou seu formato não é compatível"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحزمة تالفة أو تنسيقها غير مدعوم"
+          }
+        }
+      }
+    },
+    "キーがこのパッケージの認証アカウントと一致しないため復号できません": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥与此安装包的授权账号不一致，无法解密"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The key does not match this package's authorization account and cannot decrypt it"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密鑰與此安裝包的授權帳號不一致，無法解密"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーがこのパッケージの認証アカウントと一致しないため復号できません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키가 이 패키지의 인증 계정과 일치하지 않아 복호화할 수 없습니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ не соответствует учётной записи авторизации этого пакета и не может его расшифровать"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clave no coincide con la cuenta de autorización de este paquete y no puede descifrarlo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clé ne correspond pas au compte d'autorisation de ce paquet et ne peut pas le déchiffrer"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Schlüssel stimmt nicht mit dem Autorisierungskonto dieses Pakets überein und kann es nicht entschlüsseln"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A chave não corresponde à conta de autorização deste pacote e não pode descriptografá-lo"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يتطابق المفتاح مع حساب ترخيص هذه الحزمة ولا يمكنه فك تشفيرها"
+          }
+        }
+      }
+    },
+    "このパッケージには復号できる暗号化バイナリがありません（復号済み、またはキーのアカウントと認証が不一致の可能性）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此安装包没有可解密的加密程序（可能已是解密包，或授权与密钥账号不一致）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This package has no encrypted binaries to decrypt (it may already be decrypted, or the key's account does not match the authorization)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此安裝包沒有可解密的加密程式（可能已是解密包，或授權與密鑰帳號不一致）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このパッケージには復号できる暗号化バイナリがありません（復号済み、またはキーのアカウントと認証が不一致の可能性）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 패키지에는 복호화할 암호화된 바이너리가 없습니다(이미 복호화되었거나 키의 계정이 인증과 일치하지 않을 수 있음)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В этом пакете нет зашифрованных бинарных файлов для расшифровки (возможно, он уже расшифрован, либо учётная запись ключа не совпадает с авторизацией)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este paquete no tiene binarios cifrados para descifrar (puede que ya esté descifrado o que la cuenta de la clave no coincida con la autorización)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce paquet ne contient aucun binaire chiffré à déchiffrer (il est peut-être déjà déchiffré, ou le compte de la clé ne correspond pas à l'autorisation)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses Paket enthält keine verschlüsselten Binärdateien zum Entschlüsseln (es ist möglicherweise bereits entschlüsselt, oder das Konto des Schlüssels stimmt nicht mit der Autorisierung überein)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este pacote não tem binários criptografados para descriptografar (pode já estar descriptografado ou a conta da chave não corresponde à autorização)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا تحتوي هذه الحزمة على ملفات ثنائية مشفرة لفك تشفيرها (قد تكون مفكوكة التشفير بالفعل، أو أن حساب المفتاح لا يتطابق مع الترخيص)"
+          }
+        }
+      }
+    },
+    "復号演算に失敗しました（%lld）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密运算失败（%lld）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decryption operation failed (%lld)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密運算失敗（%lld）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号演算に失敗しました（%lld）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 연산 실패(%lld)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ошибка операции расшифровки (%lld)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error en la operación de descifrado (%lld)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l'opération de déchiffrement (%lld)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsvorgang fehlgeschlagen (%lld)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha na operação de descriptografia (%lld)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشلت عملية فك التشفير (%lld)"
+          }
+        }
+      }
+    },
+    "選択したファイルは16バイトの credential.bin ではありません": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所选文件不是 16 字节的 credential.bin"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The selected file is not a 16-byte credential.bin"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所選檔案不是 16 位元組的 credential.bin"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選択したファイルは16バイトの credential.bin ではありません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "선택한 파일은 16바이트 credential.bin이 아닙니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбранный файл не является 16-байтным credential.bin"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El archivo seleccionado no es un credential.bin de 16 bytes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le fichier sélectionné n'est pas un credential.bin de 16 octets"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die ausgewählte Datei ist keine 16-Byte-credential.bin"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O arquivo selecionado não é um credential.bin de 16 bytes"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الملف المحدد ليس credential.bin بحجم 16 بايت"
+          }
+        }
+      }
+    },
+    "復号キーを保存できませんでした（%lld）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存解密密钥（%lld）"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not save the decryption key (%lld)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法儲存解密密鑰（%lld）"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キーを保存できませんでした（%lld）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키를 저장할 수 없습니다(%lld)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось сохранить ключ расшифровки (%lld)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo guardar la clave de descifrado (%lld)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d'enregistrer la clé de déchiffrement (%lld)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsselungsschlüssel konnte nicht gespeichert werden (%lld)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível salvar a chave de descriptografia (%lld)"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذر حفظ مفتاح فك التشفير (%lld)"
           }
         }
       }

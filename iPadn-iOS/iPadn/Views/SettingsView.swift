@@ -266,6 +266,12 @@ struct SettingsView: View {
             }
             if page == .maintenance {
             Section {
+                NavigationLink { FairPlayKeyView() } label: { Label("FairPlay復号キー", systemImage: "lock.open") }
+                    .accessibilityIdentifier("settings.fairplay-key")
+            } header: { Text("復号") } footer: {
+                Text("ダウンロードしたアカウントに紐づく復号キーをインポートすると、ダウンロード一覧からパッケージを復号して書き出せます。")
+            }
+            Section {
                 Button("导出设置与关注") {
                     do { share = SharedFile(url: try store.exportBackup()) } catch { store.errorMessage = error.localizedDescription }
                 }

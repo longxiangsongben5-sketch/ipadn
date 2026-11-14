@@ -348,6 +348,7 @@ struct DownloadsView: View {
                                     Button("任务详情", systemImage: "info.circle") { inspecting = job }
                                     if let file = manager.fileURL(job) {
                                         Button("导出文件", systemImage: "square.and.arrow.up") { share = SharedFile(url: manager.exportURL(job) ?? file) }
+                                        Button("復号して書き出す", systemImage: "lock.open") { decryptAndShare(file: file) }
                                         if job.rawFormat == nil {
                                             Button("安装", systemImage: "square.and.arrow.down") { installing = job }
                                         }
@@ -481,6 +482,20 @@ struct DownloadsView: View {
         if pendingDelete.isEmpty { store.infoMessage = AppText.text("任务处理完成后才能删除") }
         else { confirmingDelete = true }
     }
+    private func decryptAndShare(file: URL) {
+        guard let credential = FairPlayCredentialStore.load() else {
+            store.errorMessage = AppText.text("FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」で credential.bin をインポートしてください")
+            return
+        }
+        perform {
+            let result = try await Task.detached(priority: .userInitiated) {
+                try FairPlayDecryptor.decryptIPA(source: file, credential: credential)
+            }.value
+            store.infoMessage = AppText.text("復号完了：\(result.binaries) 個のバイナリ、合計 \(result.pages) ページ")
+            share = SharedFile(url: result.url)
+        }
+    }
+
     private func perform(_ operation: @escaping () async throws -> Void) {
         guard !actionBusy else { return }; actionBusy = true
         Task {
