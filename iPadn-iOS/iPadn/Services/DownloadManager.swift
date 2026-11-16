@@ -84,6 +84,9 @@ final class DownloadManager: NSObject, ObservableObject {
     @Published private(set) var waitingForWiFi = false
     /// Finished downloads waiting for the install sheet to open.
     @Published var pendingAutoInstalls: [UUID] = []
+    /// Finished downloads waiting to be decrypted automatically (the
+    /// "復号" buttons on the detail page), presented one at a time.
+    @Published var pendingAutoDecrypts: [UUID] = []
     /// Install When Downloaded with native installation: no prompt is needed,
     /// so finished downloads install by themselves, also in the background.
     private var silentInstall = false
@@ -127,6 +130,52 @@ final class DownloadManager: NSObject, ObservableObject {
         var list = waitingInstalls.filter { $0 != id.uuidString }
         if waiting { list.append(id.uuidString) }
         waitingInstalls = list
+    }
+
+    /// Finished downloads still waiting to be decrypted automatically.
+    /// Kept across launches like the install list: a download can finish
+    /// (or the app can be closed) before the decrypt step runs.
+    private static let autoDecryptKey = "autoDecryptWaiting"
+    private var waitingDecrypts: [String] {
+        get { LocalResources.defaults.stringArray(forKey: Self.autoDecryptKey) ?? [] }
+        set { LocalResources.defaults.set(newValue, forKey: Self.autoDecryptKey) }
+    }
+    func markWaitingDecrypt(_ id: UUID, _ waiting: Bool) {
+        var list = waitingDecrypts.filter { $0 != id.uuidString }
+        if waiting { list.append(id.uuidString) }
+        waitingDecrypts = list
+    }
+    func waitsForDecrypt(_ id: UUID) -> Bool { waitingDecrypts.contains(id.uuidString) }
+
+    /// Marks an active job to be decrypted when its download completes.
+    func setDecryptAfterDownload(_ id: UUID) {
+        guard let index = jobs.firstIndex(where: { $0.id == id }) else { return }
+        jobs[index].decryptAfterDownload = true
+        persist()
+    }
+
+    /// Asks for a finished job to be decrypted now (detail-page "復号"
+    /// tapped for a version that is already downloaded).
+    func requestAutoDecrypt(_ id: UUID) {
+        markWaitingDecrypt(id, true)
+        if !pendingAutoDecrypts.contains(id) { pendingAutoDecrypts.append(id) }
+    }
+
+    /// iPadn is in front: decrypt what is still waiting.
+    func resumeAutoDecrypts() {
+        Task { @MainActor in
+            await loaded()
+            for value in waitingDecrypts {
+                guard let id = UUID(uuidString: value) else {
+                    waitingDecrypts = waitingDecrypts.filter { $0 != value }; continue
+                }
+                guard let job = jobs.first(where: { $0.id == id && $0.status == .completed }),
+                      fileURL(job) != nil else {
+                    markWaitingDecrypt(id, false); continue
+                }
+                if !pendingAutoDecrypts.contains(id) { pendingAutoDecrypts.append(id) }
+            }
+        }
     }
 
     /// iPadn is in front: install what is still waiting, silently with
@@ -419,7 +468,10 @@ final class DownloadManager: NSObject, ObservableObject {
         }
         restoring = false
         for job in jobs where job.status == .processing {
-            if adoptFinishedPackage(job.id) { continue }
+            if adoptFinishedPackage(job.id) {
+                if job.decryptAfterDownload == true { markWaitingDecrypt(job.id, true) }
+                continue
+            }
             if FileManager.default.fileExists(atPath: LocalResources.stagingURL(job.id).path) { process(job.id) }
             else { fail(job.id, error: ToolError.message(AppText.text("下载文件丢失，请重试"))) }
         }
@@ -920,6 +972,13 @@ final class DownloadManager: NSObject, ObservableObject {
                 try? FileManager.default.removeItem(at: LocalResources.resumeURL(id))
                 if job.protectedMacPackage == true { MacPackageSecrets.delete(id) }
                 self.persist()
+                // "復号" downloads decrypt themselves once they land; the
+                // presenter picks the job up while iPadn is in front, and
+                // the waiting list covers a finish in the background.
+                if job.decryptAfterDownload == true && job.rawFormat == nil {
+                    self.markWaitingDecrypt(id, true)
+                    if !self.pendingAutoDecrypts.contains(id) { self.pendingAutoDecrypts.append(id) }
+                }
                 // Only downloaded app packages; imported files and Mac packages are not installed here.
                 let installs = self.autoInstall && job.rawFormat == nil && job.protectedMacPackage != true && job.sourceURL != nil
                 // Kept across launches only for the silent install, which iOS can interrupt.

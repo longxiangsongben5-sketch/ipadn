@@ -105,8 +105,9 @@ struct iPadnApp: App {
                 .compatibleOnChange(of: lockSettings) { _ in configureLock(launching: false) }
                 // @Published sends before the value changes: look once it has.
                 .onReceive(store.downloads.$pendingAutoInstalls) { _ in AutoInstall.presentSoon(store) }
+                .onReceive(store.downloads.$pendingAutoDecrypts) { _ in AutoDecrypt.presentSoon(store) }
                 .onReceive(store.downloads.$autoInstallNotice) { notice in if let notice { store.infoMessage = notice } }
-                .onReceive(AppLock.shared.$locked) { locked in if !locked { AutoInstall.presentSoon(store) } }
+                .onReceive(AppLock.shared.$locked) { locked in if !locked { AutoInstall.presentSoon(store); AutoDecrypt.presentSoon(store) } }
                 .task {
                     guard !LocalResources.isPreview, store.settings.appUpdateCheck else { return }
                     await store.checkAppUpdate()
@@ -114,7 +115,7 @@ struct iPadnApp: App {
         }
         .onChange(of: scenePhase) { phase in
             if !LocalResources.isPreview { AppLock.shared.sceneChanged(to: phase) }
-            if phase == .active { store.downloads.resumeAutoInstalls(); AutoInstall.presentNext(store) }
+            if phase == .active { store.downloads.resumeAutoInstalls(); AutoInstall.presentNext(store); store.downloads.resumeAutoDecrypts(); AutoDecrypt.presentNext(store) }
             guard phase == .background, !LocalResources.isPreview else { return }
             // Session cookies kept in memory must survive the app being closed.
             store.apple.saveLiveCookies()

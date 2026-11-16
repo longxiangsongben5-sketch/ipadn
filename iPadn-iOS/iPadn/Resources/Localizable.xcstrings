@@ -85742,6 +85742,636 @@
           }
         }
       }
+    },
+    "ダウンロード完了後に自動で復号します": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载完成后自动解密"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Will decrypt automatically when the download finishes"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下載完成後自動解密"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ダウンロード完了後に自動で復号します"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다운로드가 완료되면 자동으로 복호화합니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка выполнится автоматически по завершении загрузки"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se descifrará automáticamente cuando finalice la descarga"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrement automatique à la fin du téléchargement"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird nach Abschluss des Downloads automatisch entschlüsselt"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Será descriptografado automaticamente quando o download terminar"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيتم فك التشفير تلقائيًا عند اكتمال التنزيل"
+          }
+        }
+      }
+    },
+    "復号中…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密中…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密中…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号中…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 중…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrando…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrement…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entschlüsseln…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografando…"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ فك التشفير…"
+          }
+        }
+      }
+    },
+    "大きなアプリでは数分かかることがあります": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大型应用可能需要几分钟"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Large apps can take a few minutes"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大型應用程式可能需要幾分鐘"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大きなアプリでは数分かかることがあります"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "큰 앱은 몇 분 정도 걸릴 수 있습니다"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для больших приложений это может занять несколько минут"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las apps grandes pueden tardar unos minutos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les grandes applications peuvent prendre quelques minutes"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bei großen Apps kann es einige Minuten dauern"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps grandes podem levar alguns minutos"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قد تستغرق التطبيقات الكبيرة بضع دقائق"
+          }
+        }
+      }
+    },
+    "バックグラウンドで続行": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在后台继续"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue in Background"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在背景繼續"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バックグラウンドで続行"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "백그라운드에서 계속"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Продолжить в фоне"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar en segundo plano"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuer en arrière-plan"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Hintergrund fortfahren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar em segundo plano"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المتابعة في الخلفية"
+          }
+        }
+      }
+    },
+    "復号バージョン %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密版本 %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypt version %@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密版本 %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号バージョン %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "버전 %@ 복호화"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровать версию %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrar la versión %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrer la version %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ entschlüsseln"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografar a versão %@"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فك تشفير الإصدار %@"
+          }
+        }
+      }
+    },
+    "復号バージョン ID %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密版本 ID %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypt version ID %@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密版本 ID %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号バージョン ID %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "버전 ID %@ 복호화"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровать версию с ID %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descifrar el ID de versión %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déchiffrer l'ID de version %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versions-ID %@ entschlüsseln"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descriptografar o ID de versão %@"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فك تشفير معرّف الإصدار %@"
+          }
+        }
+      }
+    },
+    "FairPlay復号キーがまだインポートされていません。先に「アカウント › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未导入 FairPlay 解密密钥。请先在“账号 › 维护 › FairPlay 解密密钥”中以文本方式导入密钥"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import the key as text first under Account › Maintenance › FairPlay Decryption Key"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未匯入 FairPlay 解密金鑰。請先在「帳號 › 維護 › FairPlay 解密金鑰」中以文字方式匯入金鑰"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay復号キーがまだインポートされていません。先に「アカウント › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 복호화 키가 아직 가져와지지 않았습니다. 먼저 \"계정 › 유지 관리 › FairPlay 복호화 키\"에서 키를 텍스트로 가져오세요"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки FairPlay ещё не импортирован. Сначала импортируйте ключ текстом в разделе «Аккаунт › Обслуживание › Ключ расшифровки FairPlay»"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clave de descifrado FairPlay aún no se ha importado. Importa primero la clave como texto en Cuenta › Mantenimiento › Clave de descifrado FairPlay"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clé de déchiffrement FairPlay n'a pas encore été importée. Importez d'abord la clé sous forme de texte dans Compte › Maintenance › Clé de déchiffrement FairPlay"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der FairPlay-Entschlüsselungsschlüssel wurde noch nicht importiert. Importiere den Schlüssel zuerst als Text unter Account › Wartung › FairPlay-Entschlüsselungsschlüssel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A chave de descriptografia FairPlay ainda não foi importada. Importe primeiro a chave como texto em Conta › Manutenção › Chave de descriptografia FairPlay"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم استيراد مفتاح فك تشفير FairPlay بعد. استورد المفتاح كنص أولاً من الحساب › الصيانة › مفتاح فك تشفير FairPlay"
+          }
+        }
+      }
+    },
+    "credential.bin の中身を16進数（32文字）または Base64 で貼り付けて取り込めます。ファイルアプリから credential.bin を iPadn に共有しても自動で取り込まれます。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以将 credential.bin 的内容以十六进制（32 个字符）或 Base64 粘贴导入。从“文件”App 将 credential.bin 共享到 iPadn 也会自动导入。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste the contents of credential.bin as hexadecimal (32 characters) or Base64 to import it. Sharing credential.bin to iPadn from the Files app also imports it automatically."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以將 credential.bin 的內容以十六進位（32 個字元）或 Base64 貼上匯入。從「檔案」App 將 credential.bin 分享到 iPadn 也會自動匯入。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin の中身を16進数（32文字）または Base64 で貼り付けて取り込めます。ファイルアプリから credential.bin を iPadn に共有しても自動で取り込まれます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "credential.bin의 내용을 16진수(32자) 또는 Base64로 붙여넣어 가져올 수 있습니다. 파일 앱에서 credential.bin을 iPadn으로 공유해도 자동으로 가져옵니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Содержимое credential.bin можно вставить в виде шестнадцатеричной строки (32 символа) или Base64. Если поделиться файлом credential.bin в iPadn из приложения «Файлы», он также импортируется автоматически."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pega el contenido de credential.bin en hexadecimal (32 caracteres) o Base64 para importarlo. Compartir credential.bin con iPadn desde la app Archivos también lo importa automáticamente."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collez le contenu de credential.bin en hexadécimal (32 caractères) ou en Base64 pour l’importer. Partager credential.bin vers iPadn depuis l’app Fichiers l’importe aussi automatiquement."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Füge den Inhalt von credential.bin als Hexadezimalwert (32 Zeichen) oder Base64 ein, um ihn zu importieren. Wenn du credential.bin aus der Dateien-App an iPadn teilst, wird er ebenfalls automatisch importiert."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cole o conteúdo de credential.bin em hexadecimal (32 caracteres) ou Base64 para importá-lo. Compartilhar credential.bin com o iPadn pelo app Arquivos também o importa automaticamente."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الصق محتويات credential.bin بصيغة سداسية عشرية (32 حرفًا) أو Base64 لاستيرادها. تؤدي أيضًا مشاركة credential.bin إلى iPadn من تطبيق الملفات إلى استيراده تلقائيًا."
+          }
+        }
+      }
+    },
+    "復号キー（credential.bin、16バイト）はダウンロードに使った Apple アカウントに紐づいています。自分の脱獄デバイスから一度だけ取り出してインポートすれば、ダウンロード一覧のパッケージで「復号して書き出す」を選ぶだけで、この端末上で復号済みパッケージを生成できます。キーはこの端末のキーチェーンにのみ保存され、アップロードされません。アカウントが違うキーではパッケージの認証を開けないため、壊れたファイルは生成されず、復号時にエラーになります。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密钥（credential.bin，16 字节）与下载所用的 Apple 账号绑定。从自己的越狱设备提取一次后导入，之后在下载列表中对安装包选择「解密并导出」即可在本机生成解密包。密钥只保存在本机钥匙串中，不会上传。 账号不一致的密钥无法打开安装包的授权，解密时会直接报错，不会生成损坏的文件。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The decryption key (credential.bin, 16 bytes) is bound to the Apple account used for the download. Extract it once from your own jailbroken device and import it; then choose “Decrypt & Export” on a package in the Downloads list to produce a decrypted package on this device. The key stays in this device's Keychain and is never uploaded. A key from a different account cannot open a package's authorization; decryption then fails with an error instead of producing a damaged file."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密密鑰（credential.bin，16 位元組）與下載所用的 Apple 帳號綁定。從自己的越獄裝置提取一次後匯入，之後在下載列表中對安裝包選擇「解密並匯出」即可在本機產生解密包。密鑰只保存在本機鑰匙圈中，不會上傳。 帳號不一致的密鑰無法開啟安裝包的授權，解密時會直接報錯，不會產生損壞的檔案。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号キー（credential.bin、16バイト）はダウンロードに使った Apple アカウントに紐づいています。自分の脱獄デバイスから一度だけ取り出してインポートすれば、ダウンロード一覧のパッケージで「復号して書き出す」を選ぶだけで、この端末上で復号済みパッケージを生成できます。キーはこの端末のキーチェーンにのみ保存され、アップロードされません。アカウントが違うキーではパッケージの認証を開けないため、壊れたファイルは生成されず、復号時にエラーになります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 키(credential.bin, 16바이트)는 다운로드에 사용한 Apple 계정에 연결되어 있습니다. 자신의 탈옥 기기에서 한 번 추출하여 가져오면, 이후 다운로드 목록에서 패키지에 대해 “복호화하고 내보내기”를 선택해 이 기기에서 복호화된 패키지를 만들 수 있습니다. 키는 이 기기의 키체인에만 저장되며 업로드되지 않습니다. 계정이 다른 키로는 패키지의 인증을 열 수 없습니다. 복호화 시 손상된 파일이 생성되지 않고 오류가 발생합니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ключ расшифровки (credential.bin, 16 байт) привязан к учётной записи Apple, использованной для загрузки. Извлеките его один раз со своего устройства с джейлбрейком и импортируйте; затем для пакета в списке загрузок выберите «Расшифровать и экспортировать», чтобы создать расшифрованный пакет на этом устройстве. Ключ хранится только в связке ключей этого устройства и никуда не отправляется. Ключ от другой учётной записи не может открыть авторизацию пакета; расшифровка завершится ошибкой, а не созданием повреждённого файла."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clave de descifrado (credential.bin, 16 bytes) está vinculada a la cuenta de Apple utilizada para la descarga. Extráigala una vez desde su propio dispositivo con jailbreak e impórtela; después elija «Descifrar y exportar» en un paquete de la lista de descargas para generar un paquete descifrado en este dispositivo. La clave permanece en el llavero de este dispositivo y nunca se sube. Una clave de otra cuenta no puede abrir la autorización de un paquete; el descifrado fallará con un error en lugar de producir un archivo dañado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La clé de déchiffrement (credential.bin, 16 octets) est liée au compte Apple utilisé pour le téléchargement. Extrayez-la une fois depuis votre propre appareil jailbreaké et importez-la ; choisissez ensuite « Déchiffrer et exporter » sur un paquet de la liste des téléchargements pour produire un paquet déchiffré sur cet appareil. La clé reste dans le trousseau de cet appareil et n'est jamais envoyée. Une clé provenant d'un autre compte ne peut pas ouvrir l'autorisation d'un paquet ; le déchiffrement échoue alors avec une erreur au lieu de produire un fichier endommagé."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Entschlüsselungsschlüssel (credential.bin, 16 Byte) ist an das für den Download verwendete Apple-Konto gebunden. Extrahieren Sie ihn einmal von Ihrem eigenen Gerät mit Jailbreak und importieren Sie ihn; wählen Sie dann bei einem Paket in der Download-Liste „Entschlüsseln und exportieren“, um auf diesem Gerät ein entschlüsseltes Paket zu erstellen. Der Schlüssel bleibt im Schlüsselbund dieses Geräts und wird nie hochgeladen. Ein Schlüssel eines anderen Kontos kann die Autorisierung eines Pakets nicht öffnen; die Entschlüsselung schlägt dann mit einem Fehler fehl, statt eine beschädigte Datei zu erzeugen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A chave de descriptografia (credential.bin, 16 bytes) está vinculada à conta Apple usada no download. Extraia-a uma vez do seu próprio dispositivo com jailbreak e importe-a; depois escolha “Descriptografar e exportar” em um pacote da lista de Downloads para gerar um pacote descriptografado neste dispositivo. A chave permanece no chaveiro deste dispositivo e nunca é enviada. Uma chave de outra conta não pode abrir a autorização de um pacote; a descriptografia falhará com um erro em vez de produzir um arquivo danificado."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفتاح فك التشفير (credential.bin، 16 بايت) مرتبط بحساب Apple المستخدم في التنزيل. استخرجه مرة واحدة من جهازك المكسور الحماية واستورده؛ ثم اختر “فك التشفير والتصدير” لأي حزمة في قائمة التنزيلات لإنشاء حزمة مفكوكة التشفير على هذا الجهاز. يبقى المفتاح في سلسلة مفاتيح هذا الجهاز ولا يُرفع أبداً. لا يمكن لمفتاح من حساب آخر فتح ترخيص الحزمة؛ سيفشل فك التشفير مع ظهور خطأ بدلاً من إنشاء ملف تالف."
+          }
+        }
+      }
     }
   },
   "version": "1.0"

@@ -484,7 +484,7 @@ struct DownloadsView: View {
     }
     private func decryptAndShare(file: URL) {
         guard let credential = FairPlayCredentialStore.load() else {
-            store.errorMessage = AppText.text("FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」で credential.bin をインポートしてください")
+            store.errorMessage = AppText.text("FairPlay復号キーがまだインポートされていません。先に「アカウント › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください")
             return
         }
         perform {

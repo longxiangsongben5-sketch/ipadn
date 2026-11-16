@@ -773,7 +773,7 @@ final class ToolStore: ObservableObject {
             platform: settings.store.platform, appID: app.id, versionID: versionID))
     }
 
-    func startDownload(app: StoreApp, versionID: String?) async throws {
+    func startDownload(app: StoreApp, versionID: String?, decryptAfterDownload: Bool = false) async throws {
         var asset = try await SAPSigner.$userInitiated.withValue(true) {
             try await apple.asset(appID: app.id, versionID: versionID, store: settings.store, useCache: settings.useSignerCache)
         }
@@ -781,6 +781,11 @@ final class ToolStore: ObservableObject {
         // listing showed it. Do not lose that listing before enqueuing.
         if asset.app.iconURL == nil { asset.app.iconURL = app.iconURL }
         try downloads.enqueue(asset)
+        if decryptAfterDownload,
+           let job = downloads.jobs.first(where: { $0.app.id == asset.app.id && $0.app.version == asset.app.version
+               && $0.account == asset.account && ![.failed, .completed].contains($0.status) }) {
+            downloads.setDecryptAfterDownload(job.id)
+        }
         // A delisted app's only artwork may arrive with the download itself.
         if let icon = asset.app.iconURL {
             func patched(_ apps: [StoreApp]) -> [StoreApp] {
