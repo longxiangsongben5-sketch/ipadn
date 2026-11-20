@@ -25,7 +25,7 @@ enum FairPlayDecryptor {
 
     // MARK: - Package driver (mirrors the reference IPA walk)
 
-    static func decryptIPA(source: URL, credential: Data) throws -> Result {
+    static func decryptIPA(source: URL, credential: Data, onProgress: ((Double) -> Void)? = nil) throws -> Result {
         guard credential.count == 16 else {
             throw ToolError.message(AppText.text("復号キーが無効です（16バイト必須）"))
         }
@@ -36,6 +36,36 @@ enum FairPlayDecryptor {
             throw ToolError.message(AppText.text("パッケージが破損しているか、形式がサポートされていません"))
         }
         let nameSet = Set(names)
+
+        // Progress: count the encrypted pages up front (headers only, the
+        // same walk the decrypt loop repeats) so the caller can show a real
+        // percentage. A failed pre-count only loses the percentage — the
+        // decrypt itself proceeds and reports phase-level updates instead.
+        var plannedPages = 0
+        if onProgress != nil {
+            for supfPath in supfPaths(names: nameSet) {
+                guard let split = supfPath.range(of: "/SC_Info/", options: .backwards) else { continue }
+                let bundle = String(supfPath[..<split.lowerBound])
+                let filename = String(supfPath[split.upperBound...])
+                let isV5 = filename.hasSuffix(".v5.supf")
+                let stem = isV5 ? String(filename.dropLast(8)) : String(filename.dropLast(5))
+                let binaryPath = bundle + "/" + stem
+                guard let binaryEntry = archive[binaryPath],
+                      let binary = try? readEntry(binaryEntry, archive: archive),
+                      let infos = try? encryptionInfos(in: binary) else { continue }
+                plannedPages += infos.reduce(0) { $0 + $1.cryptsize / pageSize }
+            }
+        }
+        var donePages = 0
+        var lastReported = -1.0
+        func report(_ fraction: Double) {
+            guard let onProgress else { return }
+            let clamped = min(1, max(0, fraction))
+            guard clamped - lastReported >= 0.002 || clamped >= 1 else { return }
+            lastReported = clamped
+            onProgress(clamped)
+        }
+        report(0)
 
         var replacements: [String: Data] = [:]
         var totalPages = 0
@@ -67,7 +97,12 @@ enum FairPlayDecryptor {
             guard let sinfEntry = archive[sinfPath], let supfEntry = archive[supfPath] else { continue }
             let sinf = try readEntry(sinfEntry, archive: archive)
             let supf = try readEntry(supfEntry, archive: archive)
-            let (decrypted, pages) = try decryptBinary(source: binary, sinf: sinf, supf: supf, credential: credential)
+            let (decrypted, pages) = try decryptBinary(source: binary, sinf: sinf, supf: supf, credential: credential, onPages: { delta in
+                donePages += delta
+                if plannedPages > 0 {
+                    report(0.85 * min(1, Double(donePages) / Double(plannedPages)))
+                }
+            })
             replacements[binaryPath] = decrypted
             totalPages += pages
         }
@@ -81,8 +116,10 @@ enum FairPlayDecryptor {
         defer { try? FileManager.default.removeItem(at: working) }
         do {
             let outArchive = try Archive(url: working, accessMode: .update)
-            for (path, data) in replacements {
-                try replaceEntry(path, data: data, archive: outArchive)
+            let total = replacements.count
+            for (index, pair) in replacements.enumerated() {
+                try replaceEntry(pair.key, data: pair.value, archive: outArchive)
+                report(0.85 + 0.15 * Double(index + 1) / Double(max(1, total)))
             }
         }
 
@@ -94,6 +131,7 @@ enum FairPlayDecryptor {
             counter += 1
         }
         try FileManager.default.moveItem(at: working, to: destination)
+        report(1)
         return Result(url: destination, binaries: replacements.count, pages: totalPages)
     }
 
@@ -267,7 +305,7 @@ enum FairPlayDecryptor {
                               cryptidOffset: entry.cryptidOffset, subtype: subtype)
     }
 
-    static func decryptBinary(source: Data, sinf: Data, supf: Data, credential: Data) throws -> (Data, Int) {
+    static func decryptBinary(source: Data, sinf: Data, supf: Data, credential: Data, onPages: ((Int) -> Void)? = nil) throws -> (Data, Int) {
         let infos = try encryptionInfos(in: source)
         let work = try deriveWork16(credential: credential, sinf: sinf)
         var result = source
@@ -276,6 +314,7 @@ enum FairPlayDecryptor {
             let pageCount = info.cryptsize / pageSize
             let recordStart = try supfRecordOffset(supf: supf, requiredPages: pageCount, wantedSubtype: info.subtype)
             totalPages += pageCount
+            var sinceReport = 0
             for localPage in 0..<pageCount {
                 let recordOffset = recordStart + 32 * localPage
                 guard recordOffset + 32 <= supf.count else {
@@ -288,7 +327,13 @@ enum FairPlayDecryptor {
                 let ciphertext = subdata(source, start, pageSize)
                 let plain = try aes(key: key, iv: subdata(record, 16, 16), data: ciphertext, operation: CCOperation(kCCDecrypt))
                 result.replaceSubrange(result.startIndex + start ..< result.startIndex + start + pageSize, with: plain)
+                sinceReport += 1
+                if sinceReport >= 64 {
+                    onPages?(sinceReport)
+                    sinceReport = 0
+                }
             }
+            if sinceReport > 0 { onPages?(sinceReport) }
             result.replaceSubrange(result.startIndex + info.cryptidOffset ..< result.startIndex + info.cryptidOffset + 4,
                                    with: [0, 0, 0, 0])
         }

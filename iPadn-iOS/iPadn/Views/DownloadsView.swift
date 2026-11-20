@@ -32,6 +32,8 @@ struct DownloadsView: View {
     /// A mode change is running; taps wait so two changes never overlap.
     @State private var switchingMode = false
     @State private var actionBusy = false
+    /// Live progress (0...1) while “復号して書き出す” runs; nil for other actions.
+    @State private var decryptProgress: Double?
     private var filteredJobs: [DownloadJob] {
         manager.jobs.filter { filter.includes($0.status) && (term.isEmpty || $0.app.name.localizedCaseInsensitiveContains(term) || $0.app.bundleID.localizedCaseInsensitiveContains(term) || $0.app.version.localizedCaseInsensitiveContains(term)) }
     }
@@ -229,7 +231,21 @@ struct DownloadsView: View {
         .sheet(item: $installing) { job in
             PackageInstallationView(job: job).sheetNotice().environmentObject(store).environmentObject(manager)
         }
-        .overlay { if actionBusy { HStack { ProgressView(); Text("正在处理…").font(.subheadline) }.padding(22).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20)).allowsHitTesting(false) } }
+        .overlay {
+            if actionBusy {
+                Group {
+                    if let decryptProgress {
+                        VStack(spacing: 10) {
+                            Text(AppText.text("復号中… \(Int((decryptProgress * 100).rounded()))%")).font(.subheadline)
+                            ProgressView(value: decryptProgress).frame(width: 180)
+                        }
+                    } else {
+                        HStack { ProgressView(); Text("正在处理…").font(.subheadline) }
+                    }
+                }
+                .padding(22).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20)).allowsHitTesting(false)
+            }
+        }
     }
     /// Row-header count: the active filter, then how many have updates.
     private func headerSummary(visible: [DownloadJob], updates: [UUID: StoreApp]) -> String {
@@ -484,12 +500,15 @@ struct DownloadsView: View {
     }
     private func decryptAndShare(file: URL) {
         guard let credential = FairPlayCredentialStore.load() else {
-            store.errorMessage = AppText.text("FairPlay復号キーがまだインポートされていません。先に「アカウント › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください")
+            store.errorMessage = AppText.text("FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください")
             return
         }
+        decryptProgress = 0
         perform {
             let result = try await Task.detached(priority: .userInitiated) {
-                try FairPlayDecryptor.decryptIPA(source: file, credential: credential)
+                try FairPlayDecryptor.decryptIPA(source: file, credential: credential) { fraction in
+                    DispatchQueue.main.async { decryptProgress = fraction }
+                }
             }.value
             store.infoMessage = AppText.text("復号完了：\(result.binaries) 個のバイナリ、合計 \(result.pages) ページ")
             share = SharedFile(url: result.url)
@@ -499,7 +518,7 @@ struct DownloadsView: View {
     private func perform(_ operation: @escaping () async throws -> Void) {
         guard !actionBusy else { return }; actionBusy = true
         Task {
-            defer { actionBusy = false }
+            defer { actionBusy = false; decryptProgress = nil }
             do { try await SAPSigner.$userInitiated.withValue(true) { try await operation() } }
             catch is CancellationError { }
             catch AppleLoginError.verificationRequired { store.requestVerification { perform(operation) } }

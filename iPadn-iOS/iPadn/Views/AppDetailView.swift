@@ -50,9 +50,6 @@ struct AppDetailView: View {
     @State private var retryAfterLoginVersion: String?
     @State private var showVerification = false
     @State private var pendingDownloadVersion: String?
-    /// The pending download above was started from a "復号" button.
-    @State private var pendingDownloadDecrypt = false
-    @State private var showKeySetup = false
     @State private var retryVersionsAfterVerification = false
     @State private var verifiedForRetry = false
     @State private var showDescription = false
@@ -228,11 +225,9 @@ struct AppDetailView: View {
                 reauthenticationID = nil
                 guard let pending = retryAfterLoginVersion else { return }
                 retryAfterLoginVersion = nil
-                let decrypt = pendingDownloadDecrypt
-                pendingDownloadDecrypt = false
                 Task { @MainActor in
                     await Task.yield()
-                    download(versionID: pending.isEmpty ? nil : pending, decrypt: decrypt)
+                    download(versionID: pending.isEmpty ? nil : pending)
                 }
             })
         }
@@ -249,9 +244,7 @@ struct AppDetailView: View {
             } else {
                 let pending = pendingDownloadVersion
                 pendingDownloadVersion = nil
-                let decrypt = pendingDownloadDecrypt
-                pendingDownloadDecrypt = false
-                if let pending { download(versionID: pending.isEmpty ? nil : pending, decrypt: decrypt) }
+                if let pending { download(versionID: pending.isEmpty ? nil : pending) }
             }
         }) {
             if let accountID = apple.activeID {
@@ -260,16 +253,6 @@ struct AppDetailView: View {
                 })
                 .environmentObject(store)
                 .environmentObject(apple)
-            }
-        }
-        .sheet(isPresented: $showKeySetup) {
-            NavigationStack {
-                FairPlayKeyView()
-                    .toolbar {
-                        ToolbarItem(placement: .cancellationAction) {
-                            Button("閉じる") { showKeySetup = false }
-                        }
-                    }
             }
         }
         .onDisappear { downloadTask?.cancel(); macOfficialTask?.cancel(); dateQuery.cancel() }
@@ -368,10 +351,6 @@ struct AppDetailView: View {
                 Spacer(minLength: 10)
                 HStack(spacing: 12) {
                     primaryButton
-                    if apple.active != nil && store.settings.store.platform.supportsIPA {
-                        RowCapsule(title: "復号") { decrypt(versionID: app.externalVersionID, versionName: app.version) }
-                            .accessibilityIdentifier("detail.decrypt")
-                    }
                     Spacer(minLength: 0)
                     if let storeURL {
                         ShareLink(item: storeURL) { Image(systemName: "square.and.arrow.up").font(.title3) }
@@ -703,11 +682,6 @@ struct AppDetailView: View {
                     RowCapsule(title: "下载", enabled: !downloadLoading && !macOfficialLoading) { download(versionID: version.id) }
                         .fixedSize()
                         .accessibilityLabel(known ? AppText.text("下载版本 \(name)") : AppText.text("下载版本 ID \(version.id)"))
-                    if store.settings.store.platform.supportsIPA {
-                        RowCapsule(title: "復号", enabled: !downloadLoading && !macOfficialLoading) { decrypt(versionID: version.id, versionName: known ? name : "") }
-                            .fixedSize()
-                            .accessibilityLabel(known ? AppText.text("復号バージョン \(name)") : AppText.text("復号バージョン ID \(version.id)"))
-                    }
                 }
                 factsLayout {
                     if let date {
@@ -954,7 +928,7 @@ struct AppDetailView: View {
         }
     }
 
-    private func download(versionID: String?, decrypt: Bool = false) {
+    private func download(versionID: String?) {
         guard !downloadLoading else { return }
         if let versionID, !versionID.isEmpty, !versionID.allSatisfy({ $0.isASCII && $0.isNumber }) { store.errorMessage = AppText.text("版本 ID 只能包含数字"); return }
         guard store.settings.store.platform.supportsIPA else {
@@ -966,55 +940,22 @@ struct AppDetailView: View {
         downloadTask = Task {
             defer { downloadLoading = false; downloadTask = nil }
             do {
-                try await store.startDownload(app: app, versionID: versionID?.isEmpty == true ? nil : versionID,
-                                              decryptAfterDownload: decrypt)
+                try await store.startDownload(app: app, versionID: versionID?.isEmpty == true ? nil : versionID)
                 reloadIfLicenseWasMissing()
             }
             catch AppleLoginError.verificationRequired {
                 pendingDownloadVersion = versionID ?? ""
-                pendingDownloadDecrypt = decrypt
                 retryVersionsAfterVerification = false
                 showVerification = true
             }
             catch AppleAuthError.reauthenticationRequired {
                 reauthenticationID = apple.activeID
                 retryAfterLoginVersion = versionID ?? ""
-                pendingDownloadDecrypt = decrypt
                 showLogin = true
             }
             catch is CancellationError { }
             catch { store.errorMessage = error.localizedDescription }
         }
-    }
-
-    /// The "復号" buttons: decrypt this version — right away when it is
-    /// already downloaded, automatically when its download finishes
-    /// otherwise. Without a key the tap opens the key setup first, so a
-    /// large download is never wasted on a missing credential.
-    private func decrypt(versionID: String?, versionName: String) {
-        guard store.settings.store.platform.supportsIPA else { return }
-        guard apple.active != nil else { showLogin = true; return }
-        guard FairPlayCredentialStore.hasCredential else { showKeySetup = true; return }
-        if let job = store.downloads.jobs.first(where: { $0.status == .completed && $0.app.id == app.id
-                && jobMatches($0, versionID: versionID, versionName: versionName) }),
-           store.downloads.fileURL(job) != nil {
-            UX.feedback()
-            store.downloads.requestAutoDecrypt(job.id)
-            return
-        }
-        if let job = store.downloads.jobs.first(where: { $0.app.id == app.id
-                && jobMatches($0, versionID: versionID, versionName: versionName)
-                && ![.failed, .completed].contains($0.status) }) {
-            store.downloads.setDecryptAfterDownload(job.id)
-            store.infoMessage = AppText.text("ダウンロード完了後に自動で復号します")
-            return
-        }
-        download(versionID: versionID, decrypt: true)
-    }
-
-    private func jobMatches(_ job: DownloadJob, versionID: String?, versionName: String) -> Bool {
-        if let versionID, !versionID.isEmpty, job.app.externalVersionID == versionID { return true }
-        return !versionName.isEmpty && job.storeVersion == versionName
     }
 }
 

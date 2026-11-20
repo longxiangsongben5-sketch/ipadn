@@ -222,9 +222,6 @@ struct DownloadJob: Codable, Identifiable {
     /// The download failed because its staging file could not be created:
     /// retrying in the foreground avoids the background session's sandbox.
     var foregroundFallback: Bool?
-    /// Started from a "復号" button: decrypt the package automatically
-    /// once the download completes, then offer it in the share sheet.
-    var decryptAfterDownload: Bool?
     var createdAt = Date()
     var progress: Double { expected > 0 ? min(1, max(0, Double(downloaded) / Double(expected))) : 0 }
     var account: String? { asset?.account }

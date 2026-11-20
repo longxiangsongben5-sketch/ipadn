@@ -86372,6 +86372,146 @@
           }
         }
       }
+    },
+    "復号中… %lld%": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密中… %lld%"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密中… %lld%"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "復号中… %lld%"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복호화 중… %lld%"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка… %lld%"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decrypting… %lld%"
+          }
+        }
+      }
+    },
+    "FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未导入 FairPlay 解密密钥。请先在“设置 › 维护 › FairPlay 解密密钥”中以文本方式导入密钥。"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未匯入 FairPlay 解密金鑰。請先在「設定 › 維護 › FairPlay 解密金鑰」中以文字方式匯入金鑰。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay復号キーがまだインポートされていません。先に「設定 › メンテナンス › FairPlay復号キー」でキーをテキストで取り込んでください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FairPlay 복호화 키가 아직 가져와지지 않았습니다. 먼저 설정 › 유지 관리 › FairPlay 복호화 키에서 키를 텍스트로 가져오세요."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The FairPlay decryption key has not been imported yet. Import it as text first under Settings › Maintenance › FairPlay Decryption Key."
+          }
+        }
+      }
     }
   },
   "version": "1.0"
